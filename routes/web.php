@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
+Route::get('/contact', 'App\Http\Controllers\ContactController@index')->name('index');
 
-Route::get("/test/func", [TestController::class, 'func']);
-Route::post("/test/func", [TestController::class, 'func']);
+//確認ページ
+Route::post('/contact/confirm', 'App\Http\Controllers\ContactController@confirm')->name('confirm');
 
+//送信完了ページ
+Route::post('/contact/thanks', 'App\Http\Controllers\ContactController@send')->name('send');

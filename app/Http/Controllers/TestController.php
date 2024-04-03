@@ -11,7 +11,7 @@ class TestController extends Controller
 
 public function api(){
     return response()->json([
-"hellokiyoraa"
+"helloKIYORA"
     ]);
 }
 }
